@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <!-- actual formula wala  -->
+        <div class="display-container">
+            <input readonly placeholder="Password" class="display" data-passwordDisplay>
+            <button class="copy-Btn" data-copy>
+                <span class="tooltip" data-copyMsg></span>
+                <img src="./copy.svg" alt="copy" height="30" width="30">
+
+            </button>
+        </div>
+        <!-- below wala  -->
+        <div class="input-container">
+            <!-- password length -->
+            <div class="length-container">
+                <p>Password length</p>
+                <p data-lengthDisplay>0</p>
+            </div>
+            <!-- slider -->
+            <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+            <!-- checkbox 4 hai -->
+            <div class="check">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Included Uppercase letter</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Included loweracse letter</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="numbers">
+                <label for="number">Included numbers</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="symbols">
+                <label for="Symbols">Included Symbols </label>
+            </div>
+            <!-- strength sectiom -->
+            <div class="strength-container">
+                <p>Strength</p>
+                <!-- color ata hai esse -->
+                <div class="indicator" data-indicator>
+
+                </div>
+            </div>
+            <!-- generate password -->
+            <button class="generateBtn"> Generate password</button>
+        </div>
+    </div>
+    <script src="./edge.js"></script>
+</body>
+
+</html>
